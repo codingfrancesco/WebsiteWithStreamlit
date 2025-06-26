@@ -59,6 +59,37 @@ elif sidebar1 == "Projects":
     st.title("Projects")
     st.write("Here are some of my recent projects:")
     st.markdown("- Project 1: A web application for managing tasks.")
+    from prs import fun_winner
+    btn1= st.button("✂️ Scissors")
+    btn2= st.button("📄 Paper")
+    btn3= st.button("🪨 Rock")
+    if btn1:
+        result = fun_winner('scissors')
+        st.write(result)
+
+    if btn2:
+        result = fun_winner('paper')
+        st.write(result)    
+
+    if btn3:
+        result = fun_winner('rock')
+        st.write(result)
+
+
+
+
+    d = st.selectbox("Select an option",[ "✂️", "📄", "🪨"])
+    if d == "✂️":
+        result = fun_winner('scissors')
+        st.write(result)
+    elif d == "📄":
+        result = fun_winner('paper')
+        st.write(result)
+    elif d == "🪨":
+        result = fun_winner('rock')
+        st.write(result)
+
+    
 
 elif sidebar1 == "Achievements":
     st.title("Achievements")
