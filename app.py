@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np  # Moved to the top with other imports
 
-sidebar1 = st.sidebar.selectbox("Sidebar", options=["Home", "MyChatbot", "Projects", "Contact"])  # Fixed method name
+sidebar1 = st.sidebar.selectbox("Sidebar", options=["Home", "MyChatbot", "Projects", "Achievements","Contact"])  # Fixed method name
 
 if sidebar1 == "Home":
     st.title("Personal Website for Francesco")
@@ -60,7 +60,14 @@ elif sidebar1 == "Projects":
     st.write("Here are some of my recent projects:")
     st.markdown("- Project 1: A web application for managing tasks.")
 
+elif sidebar1 == "Achievements":
+    st.title("Achievements")
+    st.write("Here are some of my achievements:")
+    st.markdown("- Achievement 1: Completed a major project successfully.")
+    st.markdown("- Achievement 2: Contributed to an open-source project.")
+
 elif sidebar1 == "Contact":
     st.title("Contact")
     st.write("Feel free to reach out to me via email at unknown@gmail.com")  # Fixed email
     st.write("You can also find me on [LinkedIn](https://www.linkedin.com)")  # Updated link
+
